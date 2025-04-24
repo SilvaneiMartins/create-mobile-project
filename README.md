@@ -9,6 +9,45 @@ CLI interativa para gerar projetos React Native com Expo, com opção de adicion
 
 ---
 
+## 📦 create-mobile-project CLI
+
+O create-mobile-project é uma ferramenta de linha de comando (CLI) desenvolvida para facilitar e acelerar a criação de projetos mobile utilizando Expo e Expo Router. Com uma interface interativa baseada em perguntas, o usuário pode configurar rapidamente um novo projeto selecionando o nome, o tipo de template e ferramentas adicionais.
+
+✅ Funcionalidades principais:
+    - Criação automática de projeto com Expo CLI ou Expo Router Stack.
+    - Instalação opcional de bibliotecas como Supabase, Axios, React Query, Zod, dotenv, React Native Paper e   TailwindCSS com NativeWind.
+    - Geração de arquivos e pastas padrões conforme os recursos escolhidos.
+    - Pergunta ao final se o usuário deseja gerar um arquivo .zip com o projeto criado, útil para backup ou envio.
+
+🎯 Propósito
+Essa CLI foi criada para padronizar e acelerar o processo de bootstrapping de aplicações mobile modernas, permitindo que desenvolvedores iniciem com boas práticas, dependências essenciais e estrutura de projeto organizada – tudo isso com apenas alguns cliques no terminal.
+
+---
+
+## 📋 Passo a passo interativo
+
+1. Informe o nome do projeto
+2. Escolha o template desejado
+3. Selecione ferramentas adicionais
+4. Aguarde a instalação e configuração
+5. (Opcional) Gere um `.zip` com o projeto
+
+## ✨ Funcionalidades
+
+- Criação de projetos com **Expo CLI** ou **Expo Router Stack**
+- Adição opcional de ferramentas como:
+  - Supabase
+  - Axios
+  - React Query
+  - Zod
+  - dotenv
+  - React Native Paper
+  - TailwindCSS com NativeWind
+- Configuração automática
+- Geração opcional de um arquivo `.zip` com o projeto
+
+---
+
 ## ⚙️ Como rodar o projeto
 
 Siga as etapas abaixo para clonar, instalar as dependências e executar o projeto em sua máquina:
@@ -56,7 +95,7 @@ Você será guiado por prompts para definir:
 
 ---
 
-## 🛠️ Tecnologias e Bibliotecas Utilizadas
+## 🛠️ Tecnologias e Bibliotecas Utilizadas no projeto
 
 - Supabase
 - Axios
