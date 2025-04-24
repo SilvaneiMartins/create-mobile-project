@@ -15,6 +15,7 @@ O create-mobile-project é uma ferramenta de linha de comando (CLI) desenvolvida
 
 ✅ Funcionalidades principais:
 
+- As principais funcionabilidades.
     - Criação automática de projeto com Expo CLI ou Expo Router Stack.
     - Instalação opcional de bibliotecas como Supabase, Axios, React Query, Zod, dotenv, React Native Paper e   TailwindCSS com NativeWind.
     - Geração de arquivos e pastas padrões conforme os recursos escolhidos.
