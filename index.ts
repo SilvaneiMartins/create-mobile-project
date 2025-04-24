@@ -1,16 +1,37 @@
 #!/usr/bin/env node
 
-import inquirer from "inquirer";
-import chalk from "chalk";
-import { execSync } from "child_process";
 import fs from "fs";
+import path from "path";
+import chalk from "chalk";
+import AdmZip from "adm-zip";
+import inquirer from "inquirer";
+import { execSync } from "child_process";
 
-const runCommand = (command, cwd = process.cwd()) => {
+const runCommand = (command: string, cwd: string = process.cwd()) => {
     try {
         execSync(command, { stdio: "inherit", cwd });
     } catch (err) {
         console.error(chalk.red(`Erro ao executar: ${command}`));
         process.exit(1);
+    }
+};
+
+const askZip = async (cwd: string, projectName: string) => {
+    const { shouldZip }: { shouldZip: boolean } = await inquirer.prompt([
+        {
+            type: "confirm",
+            name: "shouldZip",
+            message: "Deseja gerar um arquivo .zip com o projeto?",
+            default: false,
+        },
+    ]);
+
+    if (shouldZip) {
+        const zip = new AdmZip();
+        zip.addLocalFolder(cwd);
+        const outputPath = `${process.cwd()}/${projectName}.zip`;
+        zip.writeZip(outputPath);
+        console.log(chalk.green(`📦 Arquivo ZIP criado em: ${outputPath}`));
     }
 };
 
@@ -22,7 +43,7 @@ const main = async () => {
             type: "input",
             name: "projectName",
             message: "Nome do projeto:",
-            validate: (input) => !!input || "O nome é obrigatório.",
+            validate: (input: string) => !!input || "O nome é obrigatório.",
         },
     ]);
 
@@ -38,7 +59,7 @@ const main = async () => {
         },
     ]);
 
-    const { features } = await inquirer.prompt([
+    const { features }: { features: string[] } = await inquirer.prompt([
         {
             type: "checkbox",
             name: "features",
@@ -66,7 +87,7 @@ const main = async () => {
         }`
     );
 
-    const cwd = `${process.cwd()}/${projectName}`;
+    const cwd = path.join(process.cwd(), projectName);
 
     if (features.includes("tailwind")) {
         runCommand(`npm install nativewind tailwindcss`, cwd);
@@ -85,7 +106,7 @@ module.exports = {
   },
   plugins: [],
 }
-        `.trim()
+`.trim()
         );
     }
 
@@ -97,11 +118,11 @@ module.exports = {
             `
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL!
+const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY!
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
-        `.trim()
+`.trim()
         );
     }
 
@@ -115,7 +136,7 @@ import axios from 'axios'
 export const api = axios.create({
   baseURL: 'https://sua-api.com'
 })
-        `.trim()
+`.trim()
         );
     }
 
@@ -131,7 +152,7 @@ export const api = axios.create({
         runCommand(`npm install react-native-dotenv`, cwd);
         fs.writeFileSync(
             `${cwd}/.env`,
-            `EXPO_PUBLIC_SUPABASE_URL=https://xxx.supabase.co`
+            `EXPO_PUBLIC_SUPABASE_URL=https://xxx.supabase.co\nEXPO_PUBLIC_SUPABASE_ANON_KEY=chave`
         );
     }
 
@@ -146,6 +167,8 @@ export const api = axios.create({
         chalk.greenBright(`\n✅ Projeto ${projectName} criado com sucesso!`)
     );
     console.log(chalk.cyan(`➡️ cd ${projectName} && npx expo start`));
+
+    await askZip(cwd, projectName);
 };
 
 main();
