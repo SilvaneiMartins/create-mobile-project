@@ -14,12 +14,15 @@ CLI interativa para gerar projetos React Native com Expo, com opção de adicion
 O create-mobile-project é uma ferramenta de linha de comando (CLI) desenvolvida para facilitar e acelerar a criação de projetos mobile utilizando Expo e Expo Router. Com uma interface interativa baseada em perguntas, o usuário pode configurar rapidamente um novo projeto selecionando o nome, o tipo de template e ferramentas adicionais.
 
 ✅ Funcionalidades principais:
+```PlainText
     - Criação automática de projeto com Expo CLI ou Expo Router Stack.
     - Instalação opcional de bibliotecas como Supabase, Axios, React Query, Zod, dotenv, React Native Paper e   TailwindCSS com NativeWind.
     - Geração de arquivos e pastas padrões conforme os recursos escolhidos.
     - Pergunta ao final se o usuário deseja gerar um arquivo .zip com o projeto criado, útil para backup ou envio.
+```
 
 🎯 Propósito
+
 Essa CLI foi criada para padronizar e acelerar o processo de bootstrapping de aplicações mobile modernas, permitindo que desenvolvedores iniciem com boas práticas, dependências essenciais e estrutura de projeto organizada – tudo isso com apenas alguns cliques no terminal.
 
 ---
