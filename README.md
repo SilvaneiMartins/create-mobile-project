@@ -14,12 +14,11 @@ CLI interativa para gerar projetos React Native com Expo, com opção de adicion
 O create-mobile-project é uma ferramenta de linha de comando (CLI) desenvolvida para facilitar e acelerar a criação de projetos mobile utilizando Expo e Expo Router. Com uma interface interativa baseada em perguntas, o usuário pode configurar rapidamente um novo projeto selecionando o nome, o tipo de template e ferramentas adicionais.
 
 ✅ Funcionalidades principais:
-```PlainText
+
     - Criação automática de projeto com Expo CLI ou Expo Router Stack.
     - Instalação opcional de bibliotecas como Supabase, Axios, React Query, Zod, dotenv, React Native Paper e   TailwindCSS com NativeWind.
     - Geração de arquivos e pastas padrões conforme os recursos escolhidos.
     - Pergunta ao final se o usuário deseja gerar um arquivo .zip com o projeto criado, útil para backup ou envio.
-```
 
 🎯 Propósito
 
@@ -37,17 +36,17 @@ Essa CLI foi criada para padronizar e acelerar o processo de bootstrapping de ap
 
 ## ✨ Funcionalidades
 
-- Criação de projetos com **Expo CLI** ou **Expo Router Stack**
-- Adição opcional de ferramentas como:
-  - Supabase
-  - Axios
-  - React Query
-  - Zod
-  - dotenv
-  - React Native Paper
-  - TailwindCSS com NativeWind
-- Configuração automática
-- Geração opcional de um arquivo `.zip` com o projeto
+-   Criação de projetos com **Expo CLI** ou **Expo Router Stack**
+-   Adição opcional de ferramentas como:
+    -   Supabase
+    -   Axios
+    -   React Query
+    -   Zod
+    -   dotenv
+    -   React Native Paper
+    -   TailwindCSS com NativeWind
+-   Configuração automática
+-   Geração opcional de um arquivo `.zip` com o projeto
 
 ---
 
@@ -90,23 +89,23 @@ create-mobile-project
 
 > 📌 **Pré-requisitos:** Ter o [Node.js](https://nodejs.org/), [Expo CLI](https://docs.expo.dev/get-started/installation/) e um emulador Android/iOS ou o app Expo Go instalados.
 
-
 Você será guiado por prompts para definir:
-- Nome do projeto
-- Tipo de template (Expo CLI ou Expo Router Stack)
-- Quais ferramentas deseja adicionar
+
+-   Nome do projeto
+-   Tipo de template (Expo CLI ou Expo Router Stack)
+-   Quais ferramentas deseja adicionar
 
 ---
 
 ## 🛠️ Tecnologias e Bibliotecas Utilizadas no projeto
 
-- Supabase
-- Axios
-- React Query
-- Zod
-- dotenv
-- React Native Paper
-- TailwindCSS + NativeWind
+-   Supabase
+-   Axios
+-   React Query
+-   Zod
+-   dotenv
+-   React Native Paper
+-   TailwindCSS + NativeWind
 
 ---
 
@@ -137,12 +136,12 @@ Se quiser sugerir melhorias, corrigir bugs ou adicionar novas funcionalidades:
 
 Desenvolvido por **Silvanei Martins**
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/silvanei-martins-a5412436)
-- 🌐 [Site Pessoal](https://silvaneimartins.com.br/)
-- 🐱 [GitHub](https://github.com/Store-Sam-Martins)
-- 📧 silvaneimartins_rcc@hotmail.com
-- 🎥 [YouTube](https://www.youtube.com/@silvaneimartins2487/featured)
-- 🐦 [X (Twitter)](https://x.com/SilvaneiMartins)
+-   💼 [LinkedIn](https://www.linkedin.com/in/silvanei-martins-a5412436)
+-   🌐 [Site Pessoal](https://silvaneimartins.com.br/)
+-   🐱 [GitHub](https://github.com/Store-Sam-Martins)
+-   📧 silvaneimartins_rcc@hotmail.com
+-   🎥 [YouTube](https://www.youtube.com/@silvaneimartins2487/featured)
+-   🐦 [X (Twitter)](https://x.com/SilvaneiMartins)
 
 ---
 
